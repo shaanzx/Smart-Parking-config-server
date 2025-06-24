@@ -8,16 +8,16 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/shaanzx/Smart-Parking-config-server.git
           default-label: main
           timeout: 10
           clone-on-start: true
-        health:
-          repositories:
-            spms-config:
-              label: main
-              name: spms-config
-              profiles: default
+#        health:
+#          repositories:
+#            spms-config:
+#              label: main
+#              name: spms-config
+#              profiles: default
 
 management:
   endpoints:
