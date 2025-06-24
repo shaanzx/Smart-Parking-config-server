@@ -1,0 +1,55 @@
+# Default configuration for all services
+spring:
+  profiles:
+    active: default
+
+# Common database configuration
+database:
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: Ijse@123
+
+# Common Eureka configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+
+# Common management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+# Common logging configuration
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: INFO
+    lk.ijse: DEBUG
+
+# Application info
+info:
+  app:
+    name: Smart Parking Management System
+    description: Microservice-based Smart Parking Management System
+    version: 1.0.0
+    developer: SPMS Team
