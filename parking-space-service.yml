@@ -5,7 +5,7 @@ spring:
   application:
     name: parking-space-service
   datasource:
-    url: jdbc:mysql://localhost:3306/ps_parking_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    url: spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name?allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: Ijse@123
     driver-class-name: com.mysql.cj.jdbc.Driver
